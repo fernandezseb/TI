@@ -42,3 +42,8 @@ proces < file
 * ``find / -type d 2> /dev/null  | grep sbin`` (We redirecten de foutboodschappen naar "de vuilbak" van GNU/Linux, de stdout van find gaat naar grep.)
 
 
+# Text editing
+
+* awk '{print $2;}' users.txt ($2 staat voor de tweede kolom.)
+* sed 's/patroon/vervangtekst/g' users.txt (Tekst vervangen in users.txt, de g (optioneel) staat voor global, dit gebruik je om alle voorkomens op een lijn te verwijderen.)
+* Interessant om te weten: ip a |  awk '/inet[^6]/ {print $2}'
