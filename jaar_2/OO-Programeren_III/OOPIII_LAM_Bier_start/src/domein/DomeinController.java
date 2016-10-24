@@ -28,13 +28,16 @@ public class DomeinController
     
     public List<String> geefAlleBieren()
     {
+        
         List<Bier> bieren = bierWinkel.getBieren();
         return bieren.stream().map(Bier::toString).collect(Collectors.toList());
     }
     
     public String geefNamenBieren()
     {
-        return bierWinkel.geefNamenBieren();
+        return bierWinkel.getBieren().stream()
+                .map(Bier::getNaam).distinct()
+                .collect(Collectors.joining("%n"));
     }
     
     public String geefBierMetHoogsteAlcoholPercentage()
@@ -49,17 +52,23 @@ public class DomeinController
     
     public List<String> sorteerOpAlcoholGehalteEnNaam()
     {
-       return bierWinkel.sorteerOpAlcoholGehalteEnNaam().stream().map(Bier::toString).collect(Collectors.toList());
+       return bierWinkel.sorteerOpAlcoholGehalteEnNaam().stream()
+               .map(Bier::toString).collect(Collectors.toList());
     }
     
     public String geefAlleNamenBrouwerijen()
     {
-        return bierWinkel.geefAlleNamenBrouwerijen();
+        return bierWinkel.getBieren().stream()
+                .map(Bier::getBrouwerij)
+                .collect(Collectors.joining("%n"));
     }
     
     public String geefAlleNamenBrouwerijenMetWoord(String woord)
     {
-        return bierWinkel.geefAlleNamenBrouwerijenMetWoord(woord);
+        return bierWinkel.geefAlleBrouwerijenMetWoord(woord)
+                .stream().map(Bier::getBrouwerij)
+                .distinct()
+                .collect(Collectors.joining("%n"));
     }
 
     public String opzettenAantalBierenPerSoort()
@@ -74,7 +83,9 @@ public class DomeinController
 
     private <K, V> String overzichtToString(Map<K, V> map)
     {  //hulp voor map --> String
-         return map.entrySet().stream().map(e -> e.getKey() + "=" + e.getValue() ).collect(Collectors.joining("\n"));
+         return map.entrySet().stream()
+                 .map(e -> e.getKey() + "=" + e.getValue() )
+                 .collect(Collectors.joining("\n"));
     }
 
 

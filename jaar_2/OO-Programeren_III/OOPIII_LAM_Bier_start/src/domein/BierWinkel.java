@@ -67,22 +67,30 @@ public class BierWinkel
 
     }
 
-    //Alle brouwerijen
+    /**
+     * @deprecated This method is deprecated because it converts
+     * to primitive types in a domain class
+     */
     public String geefAlleNamenBrouwerijen()
     {
-         return bieren.stream().map(Bier::getBrouwerij).distinct().collect(Collectors.joining("\n"));
+         return bieren.stream().map(Bier::getBrouwerij).distinct().collect(Collectors.joining("%n"));
     }
     
     //Alle brouwerijen die het woord "van" bevatten
-    public String geefAlleNamenBrouwerijenMetWoord(String woord)
+    public List<Bier> geefAlleBrouwerijenMetWoord(String woord)
     {
-         return bieren.stream().filter(bier -> bier.getBrouwerij().contains(woord)).collect(Collectors.toList()).toString();
+         return bieren.stream().filter(bier -> bier.getBrouwerij().contains(woord)).collect(Collectors.toList());
     }
 
+    /**
+     * @deprecated This method is deprecated because it converts
+     * to primitive types in a domain class.
+     */
     public String geefNamenBieren()
     {
          return bieren.stream().map(Bier::getNaam).distinct().collect(Collectors.joining("%n"));
     }
+    
 
     public Map<String, List<Bier>> opzettenOverzichtBierenPerSoort()
     {
