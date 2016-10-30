@@ -29,3 +29,13 @@
 
 * Explain: “The more people become aware that these are out there, the less effective they’ll be”
 > Once people know wich accounts are bots, they won't listen to them anymore. Moreover, it will eventually even turn out to increase racism because they will try to fight back against the bots.
+
+## 1.1.3 Discussion-assignment
+
+* Do you think that it is up to the companies (Twitter/Facebook/…) to make sure there is no verbal abuse on their site?
+
+* Is it ethical to have a bot pose as a human? What could be the repercussions?
+
+* According to New York University researcher Zeynep Tufecki, there are now cases against about 2000 people for insulting the Turkish president online. If bots can be misused like this, do you think that they should be developed further?
+
+* Literature question: the author says that “Turkey’s government has been accused of monitoring Twitter for thoughtcrimes”. Which novel does the word “thoughtcrime” refer to and why is it relevant here?
