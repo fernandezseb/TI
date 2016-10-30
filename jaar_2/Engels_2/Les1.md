@@ -33,9 +33,13 @@
 ## 1.1.3 Discussion-assignment
 
 * Do you think that it is up to the companies (Twitter/Facebook/…) to make sure there is no verbal abuse on their site?
+> They should help by fighting against verbal abuse, but they shouldn't be held responsible for the actions of other people using their platform because they can't and shouldn't be asked to guarantee that no such things will happen on their service.
 
 * Is it ethical to have a bot pose as a human? What could be the repercussions?
+At the moment it is more or less clear when the person behind the account is a bot, but I think it would be better if the service would force people to indicate on the account that it is a bot. The repercussions would be that people could start a friendship with somebody that turns out to be a bot and then the person will feel bad because he/she was tricked.
 
 * According to New York University researcher Zeynep Tufecki, there are now cases against about 2000 people for insulting the Turkish president online. If bots can be misused like this, do you think that they should be developed further?
+I don't think that we shouldn't use a technique that can fight abuse because it could be abused by certain governments, because the real problem is the government itself. Anything could be misused if it falls in the wrong hands.
 
 * Literature question: the author says that “Turkey’s government has been accused of monitoring Twitter for thoughtcrimes”. Which novel does the word “thoughtcrime” refer to and why is it relevant here?
+It refers to the novel Nineteen Eighty-Four from George Orwell. Just like in Turkey in the book there is a government that tries to control people by using technology that interprets what people write (in the case of Twitter) or think (in the novel).
