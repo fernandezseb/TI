@@ -56,7 +56,7 @@ Real-time programma's | respons in een beperkte tijd
 > **Computerprogramma die een computer nabootsen, waar andere programma’s op kunnen worden uitgevoerd**
 
 Soorten:
-* Programmeertaal-specifiek (vb JVM)
+* Programmeertaal-specifiek (vb. JVM)
 * Emulator
 
 Een belangrijk stuk software dat hiervoor wordt gebruikt heet de *virtual machine monitor*.
@@ -72,7 +72,7 @@ Aan de hand van virtuele machin's kunnen verschillende **verschillende besturing
 * de **kernel** die communiceert met
 * de **hardware**
 
-**Processen** is een belangrijk concept binnen besturingssystemen.
+**Proces** is een belangrijk concept binnen besturingssystemen.
 Een proces is:
 > **een of meer reeksenopdrachten die door een besturingsprogramma worden beschouwd als een werkeenheid**
 
@@ -106,7 +106,7 @@ De OS moet dan regelen in welke volgorde processen afgehandeld worden:
 Dit gebeurt door een techniek dat **synchronisatie** heet.
 
 #### Ontwerp-criteria
-Er zijn een aantal ontwerp-criteria waar een besturingssysteem aan moe voldoen:
+Er zijn een aantal ontwerp-criteria waar een besturingssysteem aan moet voldoen:
 * consistentie
 * flexibiliteit
 * overdraagbaarheid
