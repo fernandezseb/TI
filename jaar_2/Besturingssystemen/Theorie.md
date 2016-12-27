@@ -99,3 +99,20 @@ Enkele voorbeelden
 * 2 processen willen dezelfde file lezen of schrijven
 * 2 processen willen communiceren
 
+Hier ontstaan dus **conflicten**.
+
+De OS moet dan regelen in welke volgorde processen afgehandeld worden:
+
+Dit gebeurt door een techniek dat **synchronisatie** heet.
+
+#### Ontwerp-criteria
+Er zijn een aantal ontwerp-criteria waar een besturingssysteem aan moe voldoen:
+* consistentie
+* flexibiliteit
+* overdraagbaarheid
+
+#### Compromissen
+Het is vaak onmogelijk om aan alle criteria te voldoen, daarom worden sommige soms opgeofferd ten gunste van anderen.
+
+#### Linux
+Zie slides inleiding en deel Linux voorlopig.
