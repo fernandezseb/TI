@@ -19,7 +19,7 @@ De **functies** zijn:
 ### Kort historisch overzicht
 
 
-  | Functionaliteit
+Tijd  | Functionaliteit
 ------|------
 Eerste computers | Geen OS
 Jaren 50 | Eenvoudige OS (Een programma tegelijk)
