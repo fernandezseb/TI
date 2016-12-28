@@ -22,7 +22,7 @@ De **functies** zijn:
 Tijd  | Functionaliteit
 ------|------
 Eerste computers | Geen OS
-Jaren 50 | Eenvoudige OS (Een programma tegelijk)
+Jaren 50 | Eenvoudige OS (1 programma tegelijk)
 Begin '60 | Geavanceerdere OS (Meedere programma's tegelijk in het geheugen die beurtelings uitgevoerd worden en die bronnen kunnen delen)
 Midden '60 | Verschillende computers van hetzelfde type gebruikten één OS
 Begin '70 | OS op computers met meer dan 1 processor
@@ -59,7 +59,7 @@ Soorten:
 * Programmeertaal-specifiek (vb. JVM)
 * Emulator
 
-Een belangrijk stuk software dat hiervoor wordt gebruikt heet de *virtual machine monitor*.
+Een belangrijk stuk software dat hiervoor wordt gebruikt heet de **virtual machine monitor**.
 Deze heeft als doel ervoor te zorgen dat elke *gebruiker* een uniek veel van de computeromgeving heeft.
 
 Aan de hand van virtuele machin's kunnen verschillende **verschillende besturingssystemen tegelijkertijd op 1 computer** bestaan.
@@ -107,9 +107,9 @@ Dit gebeurt door een techniek dat **synchronisatie** heet.
 
 #### Ontwerp-criteria
 Er zijn een aantal ontwerp-criteria waar een besturingssysteem aan moet voldoen:
-* consistentie
-* flexibiliteit
-* overdraagbaarheid
+* **consistentie**
+* **flexibiliteit**
+* **overdraagbaarheid**
 
 #### Compromissen
 Het is vaak onmogelijk om aan alle criteria te voldoen, daarom worden sommige soms opgeofferd ten gunste van anderen.
@@ -138,8 +138,8 @@ en in het ontwerp van een **realtimebesturingssysteem**.
 
 De doelstellingen van scheduling zijn:
 
-* doelmatigheid en tevredenheid van de gebruiker
-* resources moeten effectief/efficiënt gebruikt worden (Dit op een snelle en rendabele manier.)
+* **doelmatigheid** en **tevredenheid** van de gebruiker
+* **resources** moeten **effectief/efficiënt** gebruikt worden (Dit op een snelle en rendabele manier.)
 
 #### Efficiëntie
 
@@ -179,28 +179,28 @@ Een scheduler kan niet met alles tegelijk rekening houden want er ontstaan zelfs
 
 #### Instructiecyclus zonder onderbreking
 
-1. START
+1. **START**
 2. Fetch next instruction (**Fetch stage**)
 3. Execute instruction (**Execute stage**)
-4. HALT
+4. **HALT**
 
 2\. en 4. blijven herhalen zolang er nog instructies zijn.
 
 
 #### Instructiecyclus met onderbreking
-1. START
+1. **START**
 2. Fetch Next instruction (**Fetch stage**)
 3. Execute instruction (**Execute stage**)
 4. Er kunnen twee zaken gebeuren afhankelijk van of interrupts enabled zijn:
   * Indien **disabled**, kan er terug naar 2. worden gegaan zoals bij zonder onderbreking.
   * Indien **enabled**, kan er naar de **Interrupt stage** worden gegaan. En kan een interrupt handler worden uitgevoerd. Daarna wordt terug naar 2. gegaan.
-5. Indien er geen instructies meer zijn: HALT.
+5. Indien er geen instructies meer zijn: **HALT**.
 
 ### Systeembeeld van een proces
 
 Een proces bestaat uit:
 
-* Contect
+* Context
   * Id/nummer
   * Status of toestand
   * PC (program counter)
@@ -209,25 +209,25 @@ Een proces bestaat uit:
 * Data
 
 De verschillende toestanden waarin een proces kan zijn:
-* HOLD (is angeboden)
-* READY (gereed om uit te voeren)
-* SUSPENDED (is opgeschort)
-* RUNNING (wordt uitgevoerd en onder besturing van de CPU)
-* WAIT (wacht op iets)
-* COMPLETE (volledig afgewerkt)
+* **HOLD** (is aangeboden)
+* **READY** (gereed om uit te voeren)
+* **SUSPENDED** (is opgeschort)
+* **RUNNING** (wordt uitgevoerd en onder besturing van de CPU)
+* **WAIT** (wacht op iets)
+* **COMPLETE** (volledig afgewerkt)
 
 De verschillende toestandsovergangen zijn:
-1. niet-aangeboden => HOLD
-2. niet-aangeboden of HOLD => READY
-3. READY => RUNNING
-4. RUNNING => READY
-5. RUNNING => WAIT
-6. WAIT => READY
-7. RUNNING => COMPLETE
-8. READY => SUSPEND
-9. SUSPENDED => READY
+1. niet-aangeboden => **HOLD**
+2. niet-aangeboden of **HOLD => READY**
+3. **READY => RUNNING**
+4. **RUNNING => READY**
+5. **RUNNING => WAIT**
+6. **WAIT => READY**
+7. **RUNNING => COMPLETE**
+8. **READY => SUSPEND**
+9. **SUSPENDED => READY**
 
-Het OS houdt voor elk proces een PCB bij. Dit bevat:
+Het OS houdt voor elk proces een **PCB (process control block)** bij. Dit bevat:
 * Proces-ID
 * Procestoestand
 * Maximale en actuele looptijd
@@ -240,9 +240,9 @@ Er zijn verschillende niveau's van scheduling. Deze bepalen specifieke toestands
 
 Naam | Toestandsovergangen
 ---- | ------------------
-High-level (job scheduling) | 1,2,7
-Op middelniveau  (intermediate level) | 5,6,8,9
-Low-level scheduling | 3,4
+**High-level (job scheduling)** | 1,2,7
+**Op middelniveau  (intermediate level)** | 5,6,8,9
+**Low-level scheduling** | 3,4
 
 
 
@@ -259,24 +259,24 @@ Belangrijke criteria voor een scheduler zijn:
 * responstijd
 
 De verschillende strategieên zijn
-* Round Robin (RR)
+* **Round Robin (RR)**
   * Maakt gebruik van een vaste tijdswaarde of tijdkwantum. Wanneer deze overschreden wordt, wordt het proces onderbroken en laadt het een volgend proces in.
-* FIFO of First-come-first-served-scheduling (FCFS-
+* **First-in-first-out (FIFO)** of **First-come-first-served-scheduling (FCFS)**
   * Het proces die het eerst de CPU vraagt, wordt het eerst uitgevoerd.
-* Multilevel feedback queues (MFQ)
+* **Multilevel feedback queues (MFQ)**
   * Processen worden opgedeeld volgens frequentie van hun CPU bursts en in verschillende queues gestoken. Elke queue heeft een verschillende prioriteit. Als de processen hun eigenschappen veranderen worden ze dynamisch van de ene queue naar de andere *opgeheven*.
-* Shortest-job-first-scheduling (SJF)
+* **Shortest-job-first-scheduling (SJF)**
 * Er zijn twee strategieën die aan korte processen een hoge prioriteit geven
-  * Shortest remaining job next (SRJN) (De preëmptieve versie.)
-  * Shortest job first (SJF) (De niet-preëmptieve versie.)
+  * **Shortest remaining job next (SRJN)** (De preëmptieve versie.)
+  * **Shortest job first (SJF)** (De niet-preëmptieve versie.)
   
  #### Starvation
  
- > Wanneer een heel lang proces nooit uitgevoerd zal worden, noemen we dit starvation.
+ > Wanneer een heel lang proces nooit uitgevoerd zal worden, noemen we dit **starvation**.
  
 Mogelijkeden om dit op te lossen zijn:
 * Negeren
 * Opschorten van een aantal READY-processen
 * Periodiek prioriteiten opnieuw berekenen
  
-Dit kan niet optreden bij Round Robin en FIFO.
+Dit kan niet optreden bij **Round Robin** en **FIFO**.
