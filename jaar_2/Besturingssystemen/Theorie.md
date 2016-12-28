@@ -237,6 +237,7 @@ Het OS houdt voor elk proces een PCB bij. Dit bevat:
 * Locatie van de code of de segmenttabel van een proces
 
 Er zijn verschillende niveau's van scheduling. Deze bepalen specifieke toestandsovergangen:
+
 Naam | Toestandsovergangen
 ---- | ------------------
 High-level (job scheduling) | 1,2,7
@@ -273,10 +274,9 @@ De verschillende strategieên zijn
  
  > Wanneer een heel lang proces nooit uitgevoerd zal worden, noemen we dit starvation.
  
- Mogelijkeden om dit op te lossen zijn:
+Mogelijkeden om dit op te lossen zijn:
 * Negeren
 * Opschorten van een aantal READY-processen
 * Periodiek prioriteiten opnieuw berekenen
  
- Dit kan niet optreden bij Round Robin en FIFO.
-
+Dit kan niet optreden bij Round Robin en FIFO.
